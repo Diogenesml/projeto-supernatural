@@ -9,11 +9,11 @@ main::after{content:'';position:fixed;inset:0;background:linear-gradient(90deg,r
 .conteudo{width:min(1180px,calc(100% - 96px));margin:0 auto;min-height:100svh;display:flex;flex-direction:column;justify-content:center;gap:64px;padding:72px 80px 72px 0}
 .informacoes{max-width:690px;color:var(--ink);text-shadow:0 2px 18px rgba(0,0,0,.45)}
 .eyebrow{color:#9fd6af;text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;font-weight:600;margin-bottom:18px}
-.informacoes .logo{width:min(420px,80vw);filter:invert(1);margin-bottom:34px}
-.informacoes .descricao{max-width:660px;color:#fff;font-size:clamp(1rem,1.7vw,1.3rem);line-height:1.7;text-wrap:pretty}
+.informacoes .logo{width:min(420px,80vw);filter:invert(1);margin-bottom:30px}
+.informacoes .descricao{max-width:700px;color:#fff;font-size:clamp(1rem,1.55vw,1.22rem);line-height:1.7;text-wrap:pretty}
 .aviso{margin-top:20px;color:#d8ded9;font-size:.78rem;line-height:1.5}
-.controles{display:flex;flex-direction:column;gap:12px}
-.controle-label{color:#e6ebe7;font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;}
+.controles{display:flex;flex-direction:column;gap:12px;margin-top:4px}
+.controle-label{color:#e6ebe7;font-size:.78rem;text-transform:uppercase;letter-spacing:.12em}
 .botoes-carrossel{display:flex;gap:14px}
 .botoes-carrossel .botao{width:14px;height:14px;padding:0;border-radius:50%;border:2px solid #fff;background:transparent;cursor:pointer;transition:transform .2s ease,background .2s ease}
 .botoes-carrossel .botao:hover{transform:scale(1.2)}
