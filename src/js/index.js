@@ -1,50 +1,27 @@
-/* 
-    OBJETIVO - quando clicar no botão temos que mostrar a imagem de fundo correspondente
+const botoes = [...document.querySelectorAll(".botao")];
+const imagens = [...document.querySelectorAll(".imagem")];
 
-    - passo 1 - dar um jeito de pegar o elemento HTML dos botões
+function selecionarCena(indice) {
+  botoes.forEach((botao, i) => {
+    const selecionado = i === indice;
+    botao.classList.toggle("selecionado", selecionado);
+    botao.setAttribute("aria-pressed", String(selecionado));
+  });
 
-    - passo 2 - dar um jeito de identificar o clique do usuário no botão
-
-    - passo 3 - desmarcar o botão selecionado anterior
-
-    - passo 4 - marcar o botão clicado como se estivesse selecionada
-
-    - passo 5 - esconder a imagem anterior
-
-    - passo 6 - fazer aparecer a imagem correspondente ao botão clicado
-*/
-
-// passo 1 - dar um jeito de pegar o elemento HTML dos botões
-const botoesCarrossel = document.querySelectorAll('.botao');
-const imagens = document.querySelectorAll('.imagem');
-
-// passo 2 - dar um jeito de identificar o clique do usuário no botão
-botoesCarrossel.forEach((botao, indice) => {
-    botao.addEventListener('click', () => {
-        desativarBotaoSelecionado();
-
-        selecionarBotaoCarrossel(botao);
-
-        esconderImagemAtiva();
-
-        mostrarImagemDeFundo(indice);
-    })
-})
-
-function mostrarImagemDeFundo(indice) {
-    imagens[indice].classList.add('ativa');
+  imagens.forEach((imagem, i) => {
+    imagem.classList.toggle("ativa", i === indice);
+  });
 }
 
-function selecionarBotaoCarrossel(botao) {
-    botao.classList.add('selecionado');
-}
+botoes.forEach((botao, indice) => {
+  botao.addEventListener("click", () => selecionarCena(indice));
+});
 
-function esconderImagemAtiva() {
-    const imagemAtiva = document.querySelector('.ativa');
-    imagemAtiva.classList.remove('ativa');
-}
-
-function desativarBotaoSelecionado() {
-    const botaoSelecionado = document.querySelector('.selecionado');
-    botaoSelecionado.classList.remove('selecionado');
-}
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+  const atual = botoes.findIndex((botao) => botao.classList.contains("selecionado"));
+  const direcao = event.key === "ArrowRight" ? 1 : -1;
+  const proximo = (atual + direcao + botoes.length) % botoes.length;
+  selecionarCena(proximo);
+  botoes[proximo].focus();
+});
