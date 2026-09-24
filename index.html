@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Projeto front-end inspirado em Supernatural, com carrossel acessível, layout responsivo e JavaScript.">
+  <meta name="description" content="Site de fã sobre a série Supernatural, com apresentação da história e galeria interativa de imagens.">
   <meta name="theme-color" content="#090d0b">
-  <title>Supernatural | Projeto Front-end</title>
+  <title>Supernatural | Sobre a série</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -26,24 +26,25 @@
       <img class="imagem" src="src/imagens/spn-6.jpg" alt="" loading="lazy">
     </div>
 
-    <section class="conteudo" aria-labelledby="titulo-projeto">
+    <section class="conteudo" aria-labelledby="titulo-serie">
       <div class="informacoes">
-        <p class="eyebrow">Projeto front-end • estudo visual</p>
         <img class="logo" src="src/imagens/logo-spn.png" alt="Supernatural">
-        <h1 id="titulo-projeto" class="sr-only">Projeto inspirado em Supernatural</h1>
-        <p class="descricao">Uma experiência visual inspirada no universo da série, criada para praticar composição de layout, responsividade, transições e manipulação do DOM com JavaScript.</p>
-        <p class="aviso">Projeto de fã, sem vínculo oficial com a série ou seus detentores de direitos.</p>
+        <h1 id="titulo-serie" class="sr-only">Supernatural</h1>
+        <p class="descricao">
+          A série acompanha os irmãos Sam e Dean Winchester, que viajam pelos Estados Unidos em um Chevrolet Impala 1967 investigando acontecimentos paranormais e enfrentando criaturas sobrenaturais. Ao longo da jornada, lendas urbanas, folclore, demônios, anjos e conflitos familiares constroem uma história marcada pela relação entre os irmãos e pela luta para proteger pessoas do inexplicável.
+        </p>
+        <p class="aviso">Site de fã criado como projeto front-end, sem vínculo oficial com a série ou seus detentores de direitos.</p>
       </div>
 
       <div class="controles">
-        <p class="controle-label" id="carousel-label">Escolha uma cena</p>
+        <p class="controle-label" id="carousel-label">Explore as imagens da série</p>
         <div class="botoes-carrossel" role="group" aria-labelledby="carousel-label">
-          <button class="botao selecionado" type="button" aria-label="Mostrar cena 1" aria-pressed="true"></button>
-          <button class="botao" type="button" aria-label="Mostrar cena 2" aria-pressed="false"></button>
-          <button class="botao" type="button" aria-label="Mostrar cena 3" aria-pressed="false"></button>
-          <button class="botao" type="button" aria-label="Mostrar cena 4" aria-pressed="false"></button>
-          <button class="botao" type="button" aria-label="Mostrar cena 5" aria-pressed="false"></button>
-          <button class="botao" type="button" aria-label="Mostrar cena 6" aria-pressed="false"></button>
+          <button class="botao selecionado" type="button" aria-label="Mostrar imagem 1" aria-pressed="true"></button>
+          <button class="botao" type="button" aria-label="Mostrar imagem 2" aria-pressed="false"></button>
+          <button class="botao" type="button" aria-label="Mostrar imagem 3" aria-pressed="false"></button>
+          <button class="botao" type="button" aria-label="Mostrar imagem 4" aria-pressed="false"></button>
+          <button class="botao" type="button" aria-label="Mostrar imagem 5" aria-pressed="false"></button>
+          <button class="botao" type="button" aria-label="Mostrar imagem 6" aria-pressed="false"></button>
         </div>
       </div>
     </section>
