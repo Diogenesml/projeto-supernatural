@@ -1,49 +1,14 @@
-@media (max-width: 1280px){
-    body{
-        padding: 0 40px;
-    }
+@media(max-width:768px){
+  main::after{background:linear-gradient(180deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.82) 48%,rgba(0,0,0,.96) 100%)}
+  .conteudo{width:min(100% - 40px,680px);min-height:calc(100svh - 88px);padding:64px 0 24px;justify-content:flex-end;gap:34px}
+  .informacoes .logo{width:min(330px,78vw);margin-bottom:24px}
+  .informacoes .descricao{font-size:1rem}
+  .menu-lateral{position:static;width:100%;min-height:auto;padding:12px 0 28px}
+  .menu-lateral ul{flex-direction:row}
 }
-
-@media (max-width: 768px){
-    .informacoes{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .informacoes .descricao{
-        width: 60%;
-        text-align: center;
-    }
+@media(max-width:430px){
+  .conteudo{width:calc(100% - 32px);padding-top:48px}
+  .informacoes .logo{width:min(280px,82vw)}
+  .botoes-carrossel{gap:12px}
+  .botoes-carrossel .botao{width:16px;height:16px}
 }
-
-@media (max-width: 425px){
-    .informacoes .logo{
-        max-width: 300px;
-    }
-
-    .informacoes .descricao{
-        width: 100%;
-    }
-
-    .menu-lateral{
-        position: static;
-        min-height: auto;
-        width: 100%;
-        margin-top: 50px;
-    }
-
-    .menu-lateral ul{
-        flex-direction: row;
-    }
-
-    .conteudo{
-        min-height: 70vh;
-        gap: 50px;
-    }
-
-    body{
-        padding: 40px;
-    }
-}
-
